@@ -1,0 +1,34 @@
+{
+  "name": "eleventy-first-image-plugin",
+  "version": "1.0.2",
+  "description": "A simple Eleventy plugin to extract the first image from a post.",
+  "main": "dist/cjs/index.js",
+  "exports": {
+    "require": "./dist/cjs/index.js",
+    "import": "./dist/esm/index.js"
+  },
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json"
+  },
+  "type": "module",
+  "author": "Tilman Porschuetz <tilman@porschuetz.de>",
+  "license": "MIT",
+  "keywords": [
+    "eleventy",
+    "eleventy-plugin",
+    "image",
+    "first-image"
+  ],
+  "peerDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
